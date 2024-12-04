@@ -4,7 +4,6 @@ using System.Text.RegularExpressions;
 using System.IO;
 using System.Linq;
 
-[GlobalClass, Icon("res://icon.svg")]
 public partial class Day1 : Node
 {
 	string filename = "day1/input.txt";
@@ -14,11 +13,7 @@ public partial class Day1 : Node
 
     public override void _Ready()
     {
-        regex = new Regex(pattern);
-    }
-
-    public override void _Process(double delta)
-    {
+		regex = new Regex(pattern);
 		var lines = File.ReadLines(filename)
 			.Select(line => {
 				var parts = line.Split(new[] { ' ', '\t' }, StringSplitOptions.RemoveEmptyEntries);
