@@ -84,7 +84,6 @@ public partial class Day3 : Node
                     string num1 = "";
                     string num2 = "";
 
-                    // Get the first number
                     while (k < input.Length && Char.IsDigit(input[i + k]))
                     {
                         num1 += input[i + k];
@@ -93,9 +92,8 @@ public partial class Day3 : Node
 
                     if (k < input.Length && input[i + k] != ',') continue;
 
-                    k++; // Skip the comma
+                    k++;
 
-                    // Get the second number
                     while (k < input.Length && Char.IsDigit(input[i + k]))
                     {
                         num2 += input[i + k];
@@ -108,7 +106,6 @@ public partial class Day3 : Node
                 }
             }
 
-            // Check for "do" or "dont"
             if (input[i] == 'd')
             {
                 if (i + 1 < input.Length && input[i + 1] == 'o')
